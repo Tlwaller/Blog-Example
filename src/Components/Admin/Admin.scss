@@ -1,0 +1,22 @@
+.admin-form {
+  padding: 10px;
+  width: 70%;
+  margin: auto;
+
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  textarea {
+    background-color: #344e64;
+    border: 2px solid #49657c;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  textarea:focus {
+    border-color: #67859e;
+    outline-width: 0;
+  }
+}

@@ -45,6 +45,24 @@ export default function App() {
     fetchPostsHandler();
   }, [fetchPostsHandler]);
 
+  //need to move this to admin
+
+  const addPostHandler = async (post) => {
+    const response = await fetch(
+      "https://react-http-11a5d-default-rtdb.firebaseio.com/posts.json",
+      {
+        method: "POST",
+        body: JSON.stringify(post),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    const data = await response.json();
+    console.log(data);
+  };
+
   let content = <p>No posts found.</p>;
 
   if (posts.length > 0) {
